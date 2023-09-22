@@ -10,26 +10,70 @@
 }
 
 body {
-  background-color: #292929;
+  background-color: #212124;
 }
 
-article {
-  height: 19em;
-  width: 30em;
-  margin: auto; 
-  margin-top: calc((100vh - 19em) /2 );
-  background-image: url('blur.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+/* Images */
 
-img {
+.asterisk {
   width: 43px;
   height: 43px;
   position: relative;
   top: 100px;
-  left: 39px;
+  left: -183px;
 }
+
+/* The check-box */
+
+.scene {
+  width: 30rem;
+  margin: 0 auto;
+}
+
+input {
+  display: none; /* verbergen van het klein checkbox bovenaan */
+}
+
+label {
+  width: 200px;
+  height: 100px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  perspective: 1000px; /* 3D effect */
+  position: relative;
+  cursor: pointer;
+}
+
+#card:checked + label .card {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  height: 19em;
+  max-width: 30em;
+  width: 100%; 
+  position: absolute;
+  margin-top: calc((100vh - 19em) /2 );
+  background-image: url('blur.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  text-align: center;
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+}
+
+/* Text design */
 
 h1 {
   color: rgb(26, 26, 26);
@@ -37,28 +81,29 @@ h1 {
   font-size: 30pt;
   position: relative;
   top: 80px;
-  left: 46px;
+  left: 0px;
 }
 
-h5 {
+p1 {
   /* margin: 0rem 0 0rem; */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   color: #effff9;
   font-family: open Arial, Helvetica, sans-serif;
   font-size: 19px;
+  font-weight: bold;
   text-transform: uppercase;
   position: relative;
   top: 63px;
-  left: 88px;
+  left: -78px;
 }
 
-p { 
-  margin: 0;
+p2 {
+  /* margin: 0rem 0 0rem; */
+  -webkit-text-stroke-width: 1px;
+  color: #000000;
+  font-family: open Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  position: relative;
 }
-
-/* button{
-  position: absolute;
-  right: -7rem;
-  bottom: -2rem;
-} */

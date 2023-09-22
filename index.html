@@ -7,12 +7,22 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <article class>
-      <img src="styles/asterisk.png"/>
-      <header>
-        <h5>webdesigner</h5>
-        <h1>alisa afanasieva</h1>
-      </header>
-    </article>
+    <div class="scene scene--card">
+      <input id="card" type="checkbox">
+      <label for="card">
+        <div class="card">
+          <div class="card__face card__face--front">
+              <img class="asterisk" src="styles/asterisk.png"/>
+              <header>
+                <p1>webdesigner</p1>
+                <h1>alisa afanasieva</h1>
+              </header>
+           </div>
+          <div class="card__face card__face--back">
+            <p2>hello</p2>
+          </div>
+        </div>
+      </label>
+    </div>
   </body>
 </html>
